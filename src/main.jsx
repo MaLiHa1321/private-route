@@ -12,6 +12,7 @@ import Jobs from './pages/job/Jobs.jsx';
 import Login from './pages/Login/Login.jsx';
 import Register from './pages/Register/Register.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
+import PrivateRoute from './privateRoute/PrivateRoute.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/job",
-        element: <Jobs></Jobs>
+        element: <PrivateRoute> <Jobs></Jobs></PrivateRoute>
       },
       {
         path: "/login",
